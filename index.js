@@ -25,11 +25,12 @@ function displayResults(responseJson) {
     $('#results').removeClass('hidden');
 }
 
-function getNationalParkInfo (query, limit=10) {
+function getNationalParkInfo (query, limit=10, stateCode) {
     const params = {
         api_key:apiKey,
         q:query,
-        limit:limit
+        limit:limit,
+        stateCode:stateCode
     };
     const queryString =  formatQueryParams(params)
     const url = searchUrl + '?' + queryString;
@@ -53,7 +54,8 @@ function watchForm() {
         event.preventDefault();
         const searchTerm = $('#js-search-term').val();
         const limit = $('#js-max-results').val();
-        getNationalParkInfo(searchTerm,limit);
+        const stateCode = $('#js-state-name').val().split(" ");
+        getNationalParkInfo(searchTerm,limit, stateCode);
     });
 }
 

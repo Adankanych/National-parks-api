@@ -10,12 +10,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Search for National Parks.</h1>
+        <h1>Search for National Parks</h1>
 
-        <form>
-            <label for="search-term">Search Park</label>
-            <input type="text" name="search-term" id="js-search-term" required>
-            <label for="max-results">Maximum results to return.</label>
+        <form id="js-form">
+            <label for="js-state-name">Search by state abbreviation</label>
+            <input type="text" name="state-name" id="js-state-name" placeholder="ex: OH,FL" required>
+            <br>
+            <label for="js-search-term">Search Park</label>
+            <input type="text" name="search-term" id="js-search-term" >
+            <br>
+            <label for="js-max-results">Maximum results to return.</label>
             <input type="number" name="max-results" id="js-max-results" value="10">
 
             <input type="submit" value="Search">

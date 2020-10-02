@@ -5,6 +5,15 @@
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+h3{
+    font-size: large;
+    font-weight: bold;
+}
+
+p{
+    font-size: medium;
+    font-weight: normal;
+}
 
 button, input[type="text"] {
     padding: 5px;
